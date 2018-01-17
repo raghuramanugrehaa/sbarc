@@ -1,0 +1,928 @@
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+
+    tools:context="info.androidhive.navigationdrawer.registrations.buyer"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="4dp"
+            android:text="Buyer Info:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buyer_type"
+            android:entries="@array/buyer_type"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company legal Name"
+            android:textSize="15dp"
+            android:id="@+id/company_legal_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Authorized Person Name"
+            android:textSize="15dp"
+            android:id="@+id/auth_persom_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Street Address"
+                android:textSize="15dp"
+                android:id="@+id/street_address"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="City                    "
+                android:textSize="15dp"
+                android:id="@+id/city"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state"
+                android:entries="@array/spinner_stateslist"
+                android:prompt="@string/spinner_states"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+            </Spinner>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter country name               "
+                android:textSize="15dp"
+                android:id="@+id/country"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter zipcode                   "
+                android:textSize="15dp"
+                android:id="@+id/zipcode"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="TAX ID               "
+                android:textSize="15dp"
+                android:id="@+id/TAX_ID"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="PAN NO                   "
+                android:textSize="15dp"
+                android:id="@+id/pan"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="GST NO                   "
+                android:textSize="15dp"
+                android:id="@+id/GST"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Phone 1              "
+                android:textSize="15dp"
+                android:id="@+id/PH1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Phone 2                  "
+                android:textSize="15dp"
+                android:id="@+id/PH2"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="FAX NO                   "
+                android:textSize="15dp"
+                android:id="@+id/FAX"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Buyer History in Crab Products  :"
+            android:layout_marginBottom="12dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Mud Crab – M"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/mc_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mc_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mc_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Mud Crab – Big"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/mcb_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcb_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcb_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Mud Crab – XL"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxl_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxl_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxl_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Mud Crab – XXL"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum "
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxxl_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxxl_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcxxl_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Mud Crab – OL"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/mcol_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcol_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/mcol_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Red Crab – ALive"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/rca_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/rca_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/rca_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Soft Shell Crab"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/ssc_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/ssc_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/ssc_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="Crab Meat"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Anum"
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/cr_a"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Trading from"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/cr_y"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Per Week"
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/cr_w"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="4dp"
+                android:text="Sister Concern 1:"/>
+            <CheckBox
+                android:id="@+id/chkIos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="click to enable" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company legal Name"
+            android:textSize="15dp"
+            android:id="@+id/company_legal_name1"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Authorized Person Name"
+            android:textSize="15dp"
+            android:id="@+id/auth_persom_name1"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Street Address"
+                android:textSize="15dp"
+                android:id="@+id/street_address1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="City                    "
+                android:textSize="15dp"
+                android:id="@+id/city1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state1"
+                android:entries="@array/spinner_stateslist"
+                android:prompt="@string/spinner_states"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+            </Spinner>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Country               "
+                android:textSize="15dp"
+                android:id="@+id/country1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter Zipcode                   "
+                android:textSize="15dp"
+                android:id="@+id/zipcode1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="TAX ID               "
+                android:textSize="15dp"
+                android:id="@+id/TAX_ID1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="PAN NO                   "
+                android:textSize="15dp"
+                android:id="@+id/pan1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="GST NO                   "
+                android:textSize="15dp"
+                android:id="@+id/GST1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Phone 1              "
+                android:textSize="15dp"
+                android:id="@+id/PH11"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Phone 2                  "
+                android:textSize="15dp"
+                android:id="@+id/PH21"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="FAX NO                   "
+                android:textSize="15dp"
+                android:id="@+id/FAX1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                />
+
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="4dp"
+            android:text="Payment Terms:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pttype"
+            android:entries="@array/pttype"
+
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pttimes"
+            android:entries="@array/pttimes"
+
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="4dp"
+            android:text="Payment Details:"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Bank Name"
+            android:textSize="15dp"
+            android:id="@+id/bank_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Account No"
+            android:textSize="15dp"
+            android:id="@+id/account_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter IFSC CODE"
+            android:textSize="15dp"
+            android:id="@+id/ifsc"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="4dp"
+            android:text="Shipment Terms:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shipment_type"
+            android:entries="@array/shipment_type_buyer"
+
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+
+        <com.apptecherzz.apcrabs.Mutli
+            android:id="@+id/input1"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Will provide Rate card"
+            android:layout_marginBottom="12dp"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Ratecard"
+            android:entries="@array/Rate_card"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Have local Grader"
+            android:layout_marginBottom="12dp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lg"
+            android:entries="@array/bolean"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Have local Collector"
+            android:layout_marginBottom="12dp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lc"
+            android:entries="@array/bolean"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Original occupation                          "-->
+        <!--android:textSize="15dp"-->
+        <!--android:id="@+id/et_occupation"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"/>-->
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Farming Capacity"-->
+        <!--android:textSize="15dp"-->
+        <!--android:id="@+id/et_farmingcapacity"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="true"/>-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/bt_submitform"
+            android:text="NEXT"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/bt_submit2"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

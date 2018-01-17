@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="Android/data/" name="files_root" />
+    <external-path path="storage/emulated/0/" name="external_storage_root" />
+    <external-path name="content" path="Android/data/com.my_package_name/files/" />
+</paths>

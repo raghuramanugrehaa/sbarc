@@ -1,0 +1,238 @@
+<resources>
+    <string name="app_name">SRT Crabs</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_pdf">PDF</string>
+    <string name="nav_movies">Videos</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">Farmer or Buyer or seed Supplier</string>
+    <string name="nav_farm_visit">Apply Now</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>PDF</item>
+        <item>Videos</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+
+    <string name="api_base_url">https://preprod.quagga.in/gateway/</string>
+
+    <!--  PreProduction => PP
+          Production => P   -->
+    <string name="sdk_env">PP</string>
+
+
+    <string-array name="occupation">
+        <item>Select Occupation</item>
+        <item>Student</item>
+        <item>Agri Farmer </item>
+        <item>Aqua Farmer </item>
+        <item>Pvt. Employee </item>
+        <item>Business </item>
+        <item>Govt Official</item>
+
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+    <string name="loading_text">Loading Please wait....</string>
+    <string name="fa_icon_user">&#xf10b;</string>
+    <string name="fa_icon_key">&#xf084;</string>
+    <string name="spinner_states">Select State</string>
+
+    <string-array name="spinner_stateslist">
+        <item>Select State</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+    <string-array name="spinner_occupation">
+        <item>Select Occupation</item>
+        <item>Type1</item>
+        <item>Type2</item>
+
+    </string-array>
+    <string-array name="spinner_capacity">
+        <item>Select Farming Capacity</item>
+        <item>0-5 Acres</item>
+        <item>5-10 Acres</item>
+        <item>10-15 Acres</item>
+        <item>15-20 Acres</item>
+        <item>20-25 Acres</item>
+        <item>25-30 Acres</item>
+        <item>30-35 Acres</item>
+        <item>35-40 Acres</item>
+        <item>45-50 Acres</item>
+
+    </string-array>
+
+    <string-array name="spinner_watertype">
+        <item>Select Water Type</item>
+        <item>Fresh Water</item>
+        <item>Brackish Water</item>
+        <item>Bore Water</item>
+
+    </string-array>
+
+    <string-array name="spinner_motortype">
+        <item>Select Motor Type</item>
+        <item>Diesel Motor</item>
+        <item>Solar Motor</item>
+        <item>Electricity motor</item>
+
+    </string-array>
+    <string name="tv_phots">Photos &amp; Documents:</string>
+
+    <string name="tv_declaration">
+    I hereby requesting, Aqua Farms to contact me on Aqua Culture requrements and I\'m interested to become a member in Andhra Crab Farmers Association for the the welfare of
+    of Mud Crab Farmers in Andhra Pradesh region.
+</string>
+    <string name="network_not_availabel">Please Connect To Internet and Try again</string>
+    <string name="tv">Please recheck once again to make sure you entered everything clearly. Form once submitted cannot be retrieved back and cannot be edditable.
+</string>
+    <string name="alert_tv_title">Are sure you want to submit this for?</string>
+
+
+    <string-array name="spinner_terms">
+        <item>Select payment type</item>
+        <item>Advance</item>
+        <item>COD</item>
+
+    </string-array>
+
+
+    <string-array name="shipment_type">
+        <item>Select Shipment type</item>
+
+        <item>Road  Way</item>
+        <item>Train</item>
+        <item>Airway</item>
+
+    </string-array>
+    <string-array name="bolean">
+        <item>YES</item>
+
+        <item>NO</item>
+
+    </string-array>
+    <string-array name="shipment_times">
+        <item>Select Shipment times</item>
+
+        <item>Once </item>
+        <item>Twice</item>
+        <item>Thrice</item>
+        <item>Fourth</item>
+        <item>Fifth</item>
+
+    </string-array>
+    <string-array name="shipment_type_buyer">
+        <item>Select Shipment type</item>
+
+        <item>CNF </item>
+        <item>FOB </item>
+        <item>CFR </item>
+        <item>CIF </item>
+    </string-array>
+
+    <string-array name="shipment_days">
+        <item>Select Shipment Days</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+
+        <item>Weday</item>
+        <item>Thursday</item>
+
+        <item>Friday</item>
+
+        <item>Saturday</item>
+        <item>Sunday</item>
+
+    </string-array>
+
+
+    <string-array name="Rate_card">
+        <item>Select Rate Card</item>
+        <item>Daily</item>
+        <item>Weekly </item>
+        <item>Monthly</item>
+        <item>Seasonally</item>
+
+    </string-array>
+    <string-array name="pttype">
+        <item>Select Payment Card</item>
+        <item>Advance </item>
+        <item>LC </item>
+        <item>LT</item>
+
+
+    </string-array>
+    <string-array name="pttimes">
+        <item>Select No Times</item>
+        <item>Once</item>
+        <item>Twice </item>
+        <item>Thrice</item>
+
+
+    </string-array>
+
+    <string-array name="buyer_type">
+        <item>Select type</item>
+        <item>International Buyer</item>
+        <item>National Buyer </item>
+        <item>Local Buyer </item>
+
+    </string-array>
+
+    <string-array name="cate">
+        <item>Select type</item>
+        <item>Direct Catcher</item>
+        <item>Local Collector</item>
+        <item>Small Trader</item>
+        <item>Big Trader</item>
+
+    </string-array>
+
+
+</resources>

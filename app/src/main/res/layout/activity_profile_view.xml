@@ -1,0 +1,132 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:context="info.androidhive.navigationdrawer.registrations.profile_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginLeft="105dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/edge_circular_button"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Phone"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="DOB"
+            android:layout_below="@+id/editText3"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Address"
+            android:lines="2"
+
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/editText4"
+            android:scrollbars="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentEnd="true" />
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=" Present Address"
+            android:lines="2"
+
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/editText5"
+            android:scrollbars="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentEnd="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farmer"
+
+                android:layout_below="@+id/editText6"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_height="wrap_content"
+                android:text="Supplier"
+                android:layout_alignBaseline="@+id/checkBox"
+                android:layout_alignBottom="@+id/checkBox"
+                android:layout_centerHorizontal="true" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/checkBox2"
+
+                android:text="Buyer" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/bt_submitform"
+            android:text="NEXT"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/bt_submit2"
+            android:layout_below="@+id/checkBox"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+</ScrollView>

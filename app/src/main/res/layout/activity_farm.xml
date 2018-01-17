@@ -1,0 +1,515 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:context="info.androidhive.navigationdrawer.registrations.farm"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="4dp"
+            android:text="Farmer Information:"/>
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mobile Number"
+            android:textSize="15dp"
+            android:id="@+id/et_mobileno"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Original Occupation"
+            android:textSize="15dp"
+            android:id="@+id/occupation"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Farming Capacity"
+            android:textSize="15dp"
+            android:id="@+id/farming_capacity"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="10"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Farms Location:"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Village"
+            android:textSize="15dp"
+            android:id="@+id/et_village"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Mandal"
+            android:textSize="15dp"
+            android:id="@+id/et_mandal"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="District"
+            android:textSize="15dp"
+            android:id="@+id/et_district"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/state1"
+            android:entries="@array/spinner_stateslist"
+            android:prompt="@string/spinner_states"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Pincode"
+            android:textSize="15dp"
+            android:id="@+id/et_pincode"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Farmer experiecnce in Aqua Culture:"
+            android:layout_marginBottom="12dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="FISH CULTURE"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Acres                       "
+                android:layout_marginLeft="45dp"
+                android:textSize="13dp"
+                android:id="@+id/et_fc_acres"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Years                                "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/et_fc_years"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="MUDCRAB CULTURE"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Acres                      "
+                android:layout_marginLeft="15dp"
+                android:textSize="13dp"
+                android:id="@+id/et_md_acres"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Years                                  "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/et_md_years"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+
+                android:textSize="13dp"
+                android:layout_marginTop="20dp"
+                android:text="SHRIMP CULTURE"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Acres                       "
+                android:layout_marginLeft="25dp"
+                android:textSize="13dp"
+                android:id="@+id/et_sh_acres"
+                android:maxLines="1"
+                android:singleLine="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Years                                   "
+                android:layout_marginLeft="5dp"
+                android:textSize="13dp"
+                android:id="@+id/et_sh_years"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Farming Area:"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Total Farming Area in Acres"
+            android:textSize="15dp"
+            android:id="@+id/et_total_farmingacres"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Owned In Acres"
+                android:textSize="15dp"
+                android:id="@+id/et_ownedacres"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Leased In Acres"
+                android:textSize="15dp"
+                android:id="@+id/et_leasedacres"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Seed in Farms:"
+            android:layout_marginBottom="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/id_seed_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/id_num_seeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number Of Seeds"
+
+                />
+
+            <RadioButton
+                android:id="@+id/id_num_bags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number Of Bags"
+                android:layout_marginLeft="15dp"/>
+
+        </RadioGroup>
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Total Farming number (Bags/Number)"
+            android:textSize="15dp"
+            android:id="@+id/et_total_farmingnumber"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Own Invested"
+                android:textSize="13dp"
+                android:layout_weight="1"
+                android:id="@+id/et_ownseednumbner"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Sponsored"
+                android:layout_weight="1"
+                android:textSize="13dp"
+                android:id="@+id/et_sponseredseednumber"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Water Resources:"
+            android:layout_marginBottom="15dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Min Salinity %"
+                android:textSize="15dp"
+                android:id="@+id/et_minsalinity"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Max.Salinity %"
+                android:textSize="15dp"
+                android:id="@+id/et_maxsalinity"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_water_types"
+            android:entries="@array/spinner_watertype"
+            android:prompt="@string/spinner_states"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_motor_types"
+            android:entries="@array/spinner_motortype"
+            android:prompt="@string/spinner_states"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined">
+        </Spinner>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/bt_submitform"
+            android:text="NEXT"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/bt_submit2"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/tv_phots"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:id="@+id/bt_farmerphoto"
+                android:text="TAKE FARMER PHOTO"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:background="@drawable/button_border"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:id="@+id/bt_uploadgovid"
+                android:text="UPLOAD GOVT. IDENTITY"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+
+                android:background="@drawable/button_border"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"
+            android:text="Govt.Identity an be Adhaar Card, Voter ID or Passport"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="Declaration:"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textSize="10.5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_declaration"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="60dp"
+            android:visibility="gone">
+
+   
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:id="@+id/bt_submitform1"
+                android:text="SUBMIT FORM"
+                android:textSize="10dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bt_submit2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

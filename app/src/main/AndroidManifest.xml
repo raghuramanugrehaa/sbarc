@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="info.androidhive.navigationdrawer">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".other.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:label="@string/activity_title_about_us" />
+        <activity
+            android:name=".activity.PrivacyPolicyActivity"
+            android:label="@string/activity_title_privacy_policy" />
+        <activity
+            android:name=".activity.login"
+            android:label="Login"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.signup"
+            android:theme="@style/AppTheme.Dark" />
+        <activity android:name=".activity.youtube" />
+        <activity android:name=".registrations.adhaar_Verification" />
+        <activity android:name=".registrations.profile_view" />
+        <activity android:name=".registrations.farm" />
+        <activity android:name=".registrations.supplier" />
+        <activity android:name=".registrations.buyer" />
+        <activity android:name=".registrations.declaration" />
+        <activity android:name=".farm_visiting.adhaar_verification" />
+        <activity android:name=".farm_visiting.declaration" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name=".activity.add_record"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity
+            android:name=".activity.full_screen"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".activity.new_post"
+            android:label="New Post" />
+        <activity android:name=".activity.post_view" />
+        <activity android:name=".fragment.view_comments"></activity>
+    </application>
+
+</manifest>

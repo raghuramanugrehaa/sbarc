@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.navigationdrawer.fragment.HomeFragment">
+
+
+    <ListView
+
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"/>
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ga" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="430dp"
+        android:text="Seems Like You Don't Have any collection "
+
+        android:textColor="@color/colorPrimary"
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textStyle="bold"/>
+</FrameLayout>

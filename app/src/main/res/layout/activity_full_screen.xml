@@ -1,0 +1,44 @@
+<RelativeLayout
+
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+
+    tools:context="info.androidhive.navigationdrawer.activity.full_screen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    >
+
+
+    <ImageView
+        android:id="@+id/test_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/video" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel Seawoods, Mahalaxmi"
+            android:id="@+id/name"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20% Cashback"
+            android:id="@+id/location"
+            android:textColor="@android:color/holo_orange_dark"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
