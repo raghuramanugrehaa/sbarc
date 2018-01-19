@@ -85,6 +85,7 @@ public class community_home_adapter extends RecyclerView.Adapter<RecyclerView.Vi
             userViewHolder.user.setText(contact.getUser());
             userViewHolder.title.setText(contact.getTitle());
             userViewHolder.desc.setText(contact.getDesc());
+            if((contact.getimage()!="")||(contact.getimage()!=null))
             userViewHolder.im.setImageBitmap(base64ToBitmap(contact.getimage()));
             userViewHolder.id.setText(contact.getId());
             System.out.println("minpl "+contact.getimage());

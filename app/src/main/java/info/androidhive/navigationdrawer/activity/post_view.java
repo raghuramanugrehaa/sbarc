@@ -62,13 +62,20 @@ TextView t,d,tm,u;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_view);
         lv=(ListView) findViewById(R.id.list);
-        t=(TextView) findViewById(R.id.second_title);
-        d=(TextView) findViewById(R.id.desc);
-        tm=(TextView) findViewById(R.id.time);
-        u=(TextView) findViewById(R.id.title);
+
+
+
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View head = inflater.inflate(R.layout.topview, lv, false);
+        t=(TextView) head.findViewById(R.id.second_title);
+        d=(TextView) head.findViewById(R.id.desc);
+        tm=(TextView) head.findViewById(R.id.time);
+        u=(TextView) head.findViewById(R.id.title);
+        ph=(ImageView) head.findViewById(R.id.imageView1);
+
+        lv.addHeaderView(head);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                 .coordinatorLayout);
-ph=(ImageView) findViewById(R.id.imageView1);
         Intent iip=getIntent();
          po=iip.getStringExtra("id");
 
@@ -160,11 +167,11 @@ name=new String[jsonArray1.length()];
 
 
                 for(int i=0;i<jsonArray1.length();i++){
-JSONObject obj1=jsonArray1.getJSONObject(0);
+JSONObject obj1=jsonArray1.getJSONObject(i);
 name[i]=obj1.getString("user");
                     tt[i]=obj1.getString("timestamp");
                     com[i]=obj1.getString("Description");
-
+System.out.println("ghg "+com[i]);
                 }
                 // pp.get(count);
 

@@ -61,8 +61,10 @@ fab.setOnClickListener(new View.OnClickListener() {
 });
         contacts = new ArrayList<>();
         random = new Random();
+        String i="0";
+        String i1="0";
         AsyncTaskRunner1 rt=new AsyncTaskRunner1();
-        rt.execute();
+        rt.execute(i);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         contactAdapter = new community_home_adapter(recyclerView, contacts, getActivity());
@@ -93,14 +95,9 @@ System.out.println("full che"+contacts.toString());
                             contactAdapter.notifyItemRemoved(contacts.size());
 
                             //Generating more data
-                            int index = contacts.size();
-                            int end = index + 10;
-                            for (int i = index; i < end; i++) {
-                                community_home_helper contact = new community_home_helper();
-                             /*   contact.setPhone(phoneNumberGenerating());
-                                contact.setEmail("DevExchanges" + i + "@gmail.com");
-                                contacts.add(contact);*/
-                            }
+                            int index =  contacts.size();
+                            AsyncTaskRunner1 rt=new AsyncTaskRunner1();
+                            rt.execute(index+"");
                             contactAdapter.notifyDataSetChanged();
                             contactAdapter.setLoaded();
                         }
@@ -131,7 +128,7 @@ System.out.println("full che"+contacts.toString());
         @Override
         protected String doInBackground(String... params) {
             publishProgress("Sleeping..."); // Calls onProgressUpdate()
-            String jsonString = callURL("http://54.68.72.28:3001/comments/posts");
+            String jsonString = callURL("http://54.68.72.28:3001/comments/posts?start="+params[0]);
             try {
                 JSONArray jsonArray = new JSONArray(jsonString);
                int  count=0;

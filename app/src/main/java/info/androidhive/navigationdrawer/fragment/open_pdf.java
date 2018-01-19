@@ -46,6 +46,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import info.androidhive.navigationdrawer.R;
+import info.androidhive.navigationdrawer.activity.pdfviewer;
 import info.androidhive.navigationdrawer.other.support_open_pdf;
 
 import static android.provider.UserDictionary.AUTHORITY;
@@ -400,7 +401,7 @@ System.out.println("poop "+exceptionToBeThrown);
                 );
                 Uri path =  Uri.fromFile(imageFile);*/
 
-                Intent pdfOpenintent = new Intent(Intent.ACTION_VIEW);
+               /* Intent pdfOpenintent = new Intent(Intent.ACTION_VIEW);
                 pdfOpenintent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 pdfOpenintent.setDataAndType(path, "application/pdf");
                 try {
@@ -408,7 +409,10 @@ System.out.println("poop "+exceptionToBeThrown);
                 }
                 catch (ActivityNotFoundException e) {
 
-                }
+                }*/
+               Intent ip=new Intent(getActivity(),pdfviewer.class);
+                ip.putExtra("imageUri", path.toString());
+                startActivity(ip);
             }
         }
     }

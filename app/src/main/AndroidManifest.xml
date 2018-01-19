@@ -74,7 +74,8 @@
             android:name=".activity.new_post"
             android:label="New Post" />
         <activity android:name=".activity.post_view" />
-        <activity android:name=".fragment.view_comments"></activity>
+        <activity android:name=".fragment.view_comments" />
+        <activity android:name=".activity.pdfviewer" android:label="Pdf"></activity>
     </application>
 
 </manifest>

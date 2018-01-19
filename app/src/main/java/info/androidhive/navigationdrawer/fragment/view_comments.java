@@ -87,7 +87,7 @@ public class view_comments extends ArrayAdapter<String> {
 
             hold.desc.setText(desc[position]);
 hold.ti.setText(time[position]);
-            System.out.println("jhg " + Name[position]);
+            System.out.println("jhg " + desc[position]);
 
 
         }
