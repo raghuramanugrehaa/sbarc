@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -50,6 +51,8 @@ String title,desc,time,photo,user,po;
     public static final int CONNECTION_TIMEOUT = 30000;
     private CoordinatorLayout coordinatorLayout;
     EditText lo;
+    SharedPreferences sharedpreferences;
+
     JSONObject dummy;
     ImageView ol;
     ListView lv;
@@ -74,6 +77,9 @@ TextView t,d,tm,u;
         ph=(ImageView) head.findViewById(R.id.imageView1);
 
         lv.addHeaderView(head);
+
+        sharedpreferences = getSharedPreferences("user",MODE_PRIVATE);
+
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                 .coordinatorLayout);
         Intent iip=getIntent();
@@ -83,7 +89,7 @@ ph.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 // Changing message text color
-        final Snackbar snackbar = Snackbar.make(coordinatorLayout, "Hey Whats Up", Snackbar.LENGTH_LONG);
+        final Snackbar snackbar = Snackbar.make(coordinatorLayout, "Hey Whats Up", Snackbar.LENGTH_INDEFINITE);
         snackbar.setActionTextColor(Color.RED);
 
 // Changing action button text color
@@ -108,7 +114,7 @@ ph.setOnClickListener(new View.OnClickListener() {
                 try {
                     dummy.put("Description",lo.getText().toString());
                     dummy.put("id",po);
-                    dummy.put("user","com_user");
+                    dummy.put("user",sharedpreferences.getString("name",null));
                     HttpPostRequest tm=new HttpPostRequest();
                     tm.execute();
                 } catch (JSONException e) {

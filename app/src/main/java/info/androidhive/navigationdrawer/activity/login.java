@@ -1,14 +1,19 @@
 package info.androidhive.navigationdrawer.activity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +33,7 @@ import java.net.URL;
 import info.androidhive.navigationdrawer.R;
 
 public class login extends AppCompatActivity {
+    private static final String TAG ="storage" ;
     SharedPreferences sharedpreferences;
 
     TextView signup;
@@ -48,7 +54,8 @@ submit=(Button) findViewById(R.id.btn_login);
         name=(EditText)findViewById(R.id.input_email);
         password=(EditText) findViewById(R.id.input_password);
        String value = sharedpreferences.getString("token", null);
-        if(value!=null){
+
+        if(value!=null&&isStoragePermissionGranted()){
             Intent iu=new Intent(login.this,MainActivity.class);
             startActivity(iu);
         }
@@ -151,9 +158,21 @@ submit=(Button) findViewById(R.id.btn_login);
             if (dialog.isShowing()) {
                 dialog.dismiss();
             }
+            JSONObject js = null;
+            String sd="false";
+            String msg="";
+            try {
+                js=new JSONObject(result);
+                sd=js.getString("success");
+                msg=js.getString("message");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
             AlertDialog alertDialog = new AlertDialog.Builder(
                     login.this).create();
-            if(result==null){
+
+            if(result==null||result==sd){
                 alertDialog.setTitle("TR CRABS");
                 alertDialog.setMessage("An Error Occured Please try Again");
                 alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
@@ -168,12 +187,37 @@ submit=(Button) findViewById(R.id.btn_login);
                 // Showing Alert Message
                 alertDialog.show();
             }
+            else if(sd=="false"){
+                alertDialog.setTitle("TR CRABS");
+
+                alertDialog.setMessage(msg);
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+
+                        // Write your code here to execute after dialog closed
+                        //Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                // Showing Alert Message
+                alertDialog.show();
+            }
             else {
-                JSONObject js;
+
                 String tok="";
+                String name="";
+                String phone="";
+                String email="";
+                String photo="";
+                String id="";
                 try {
-                     js=new JSONObject(result);
                     tok=js.getString("token");
+                    name=js.getString("Name");
+                    phone=js.getString("Phone");
+                    email=js.getString("email");
+                    photo=js.getString("photo");
+                    photo=js.getString("id");
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -181,6 +225,12 @@ submit=(Button) findViewById(R.id.btn_login);
 
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString("token", tok);
+                editor.putString("name", name);
+                editor.putString("phone", phone);
+                editor.putString("mail", email);
+                editor.putString("photo", photo);
+                editor.putString("id", id);
+
                 editor.commit();
                     Intent main=new Intent(login.this,MainActivity.class);
                 startActivity(main);
@@ -190,5 +240,31 @@ submit=(Button) findViewById(R.id.btn_login);
                 super.onPostExecute(result);
             }
         }
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(TAG,"Permission is granted");
+                return true;
+            } else {
+
+                Log.v(TAG,"Permission is revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted");
+            return true;
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+            Log.v(TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
+            //resume tasks needing this permission
+        }
+    }
     }
 

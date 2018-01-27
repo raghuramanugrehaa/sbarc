@@ -1,8 +1,11 @@
 package info.androidhive.navigationdrawer.activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -10,6 +13,7 @@ import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -46,6 +50,7 @@ import static android.provider.MediaStore.Files.FileColumns.MEDIA_TYPE_IMAGE;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG ="perms" ;
     private NavigationView navigationView;
     private DrawerLayout drawer;
     private View navHeader;
@@ -83,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     // directory name to store captured images and videos
     private static final String IMAGE_DIRECTORY_NAME = "Hello Camera";
+    SharedPreferences sharedpreferences;
 
     private Uri fileUri;
 
@@ -98,6 +104,11 @@ public class MainActivity extends AppCompatActivity {
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+
+
+        sharedpreferences = getSharedPreferences("user",MODE_PRIVATE);
 
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
@@ -133,15 +144,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void captureImage() {
+if(isStoragePermissionGranted()) {
+    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+    fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
 
-        fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+    intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
 
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+    // start the image capture Intent
+    startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
+}
+else
+    Toast.makeText(MainActivity.this,"Sorry Permission Denied",Toast.LENGTH_LONG);
+    }
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(TAG,"Permission is granted");
+                return true;
+            } else {
 
-        // start the image capture Intent
-        startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
+                Log.v(TAG,"Permission is revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted");
+            return true;
+        }
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -213,8 +245,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void loadNavHeader() {
         // name, website
-        txtName.setText("Ravi Tamada");
-        txtWebsite.setText("www.androidhive.info");
+        txtName.setText(sharedpreferences.getString("name",null));
+        txtWebsite.setText(sharedpreferences.getString("mail",null));
 
         // loading header background image
         Glide.with(this).load(urlNavHeaderBg)

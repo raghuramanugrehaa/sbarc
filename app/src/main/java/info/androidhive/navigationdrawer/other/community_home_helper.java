@@ -10,7 +10,7 @@ public class community_home_helper {
         private String title;
         private String desc;
     private String user;
-    private String image,id;
+    private String image,id,co;
 
         public String getTitle() {
             return title;
@@ -53,6 +53,16 @@ public class community_home_helper {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+
+
+    public String getcoun() {
+        return co;
+    }
+
+    public void setcount(String co) {
+        this.co = co;
     }
 
 }

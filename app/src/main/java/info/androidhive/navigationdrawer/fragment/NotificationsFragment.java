@@ -149,7 +149,7 @@ System.out.println("full che"+contacts.toString());
                     contact.setUser(jsonObject.getString("user"));
                     contact.setimage(jsonObject.getString("photo"));
                     contact.setId(jsonObject.getString("_id"));
-
+                    contact.setcount(jsonObject.getString("count"));
                     contacts.add(contact);
                 }
 

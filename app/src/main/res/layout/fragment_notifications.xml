@@ -22,7 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:tint="@android:color/white"
+
+
+
+
+        android:background="#C2185B"
+
         android:src="@android:drawable/ic_menu_edit"/>
 
 

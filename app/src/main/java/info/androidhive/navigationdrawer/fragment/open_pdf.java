@@ -1,5 +1,6 @@
 package info.androidhive.navigationdrawer.fragment;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
@@ -7,17 +8,21 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.FileProvider;
 import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -46,10 +51,12 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import info.androidhive.navigationdrawer.R;
+import info.androidhive.navigationdrawer.activity.MainActivity;
 import info.androidhive.navigationdrawer.activity.pdfviewer;
 import info.androidhive.navigationdrawer.other.support_open_pdf;
 
 import static android.provider.UserDictionary.AUTHORITY;
+import static com.android.volley.VolleyLog.TAG;
 
 
 public class open_pdf extends Fragment implements SearchView.OnQueryTextListener {
@@ -125,7 +132,6 @@ public class open_pdf extends Fragment implements SearchView.OnQueryTextListener
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String text = lv.getItemAtPosition(i).toString().trim();
                 System.out.println("clickef "+text);
-
 AsyncTaskRunner1 tr=new AsyncTaskRunner1();
                 tr.execute(text);
             }
@@ -136,6 +142,9 @@ AsyncTaskRunner1 tr=new AsyncTaskRunner1();
 
         return rootView;
     }
+
+
+
     public boolean isOnline() {
         ConnectivityManager conMgr = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = conMgr.getActiveNetworkInfo();

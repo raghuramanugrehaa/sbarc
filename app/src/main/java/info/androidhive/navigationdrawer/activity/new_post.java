@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -47,6 +48,8 @@ ImageView pick,save;
 
     Bitmap bitmap;
     TextView title,description;
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,8 @@ ImageView pick,save;
         save=(ImageView) findViewById(R.id.save);
         title=(EditText) findViewById(R.id.title);
         description=(EditText) findViewById(R.id.desc);
+        sharedpreferences = getSharedPreferences("user",MODE_PRIVATE);
+
         dummy=new JSONObject();
         pick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +78,7 @@ ImageView pick,save;
 
                     dummy.put("Description",description.getText().toString());
                     dummy.put("photo",bitmapToBase64(bitmap));
-                    dummy.put("user","Anonymys");
+                    dummy.put("user",sharedpreferences.getString("name",null));
                     HttpPostRequest rt=new HttpPostRequest();
                     rt.execute();
                 } catch (JSONException e) {

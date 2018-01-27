@@ -85,6 +85,7 @@ public class community_home_adapter extends RecyclerView.Adapter<RecyclerView.Vi
             userViewHolder.user.setText(contact.getUser());
             userViewHolder.title.setText(contact.getTitle());
             userViewHolder.desc.setText(contact.getDesc());
+            userViewHolder.coun.setText(contact.getcoun());
             if((contact.getimage()!="")||(contact.getimage()!=null))
             userViewHolder.im.setImageBitmap(base64ToBitmap(contact.getimage()));
             userViewHolder.id.setText(contact.getId());
@@ -119,7 +120,7 @@ public class community_home_adapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     private class UserViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
-        public TextView user,desc,id;
+        public TextView user,desc,id,coun;
         ImageView im;
 
         public UserViewHolder(View view) {
@@ -129,7 +130,7 @@ public class community_home_adapter extends RecyclerView.Adapter<RecyclerView.Vi
             desc = (TextView) view.findViewById(R.id.desc);
             im = (ImageView) view.findViewById(R.id.image);
             id = (TextView) view.findViewById(R.id.ids);
-
+coun=(TextView) view.findViewById(R.id.com);
 view.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -137,7 +138,7 @@ view.setOnClickListener(new View.OnClickListener() {
         // check if item still exists
         if(pos != RecyclerView.NO_POSITION){
             community_home_helper clickedDataItem = contacts.get(pos);
-            Toast.makeText(view.getContext(), "You clicked " + clickedDataItem.getId(), Toast.LENGTH_SHORT).show();
+           // Toast.makeText(view.getContext(), "You clicked " + clickedDataItem.getId(), Toast.LENGTH_SHORT).show();
             Intent ieventreport = new Intent(activity,post_view.class);
             ieventreport.putExtra("id",clickedDataItem.getId());
             activity.startActivity(ieventreport);
