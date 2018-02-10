@@ -45,6 +45,9 @@ import info.androidhive.navigationdrawer.fragment.NotificationsFragment;
 import info.androidhive.navigationdrawer.fragment.PhotosFragment;
 import info.androidhive.navigationdrawer.fragment.SettingsFragment;
 import info.androidhive.navigationdrawer.other.CircleTransform;
+import info.androidhive.navigationdrawer.registrations.adhaar_Verification;
+import info.androidhive.navigationdrawer.registrations.buyer;
+import info.androidhive.navigationdrawer.registrations.farm;
 
 import static android.provider.MediaStore.Files.FileColumns.MEDIA_TYPE_IMAGE;
 
@@ -391,7 +394,10 @@ else
                         startActivity(new Intent(MainActivity.this, adhaar_verification.class));
                         drawer.closeDrawers();
                         return true;
-
+                    case R.id.nav_about_us:
+                        startActivity(new Intent(MainActivity.this,buyer.class));
+                        drawer.closeDrawers();
+                        return true;
                     default:
                         navItemIndex = 0;
                 }
